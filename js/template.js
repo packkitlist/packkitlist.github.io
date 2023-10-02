@@ -805,10 +805,10 @@
 		//Full Page
 		if ($(".fullpage-site").length>0) {
 			$('.fullpage-site').fullpage({
-				anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+				anchors: ['Home', 'Launch', 'About', 'Uses', 'Proofs', 'Offer','Contact'],
 				navigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Intro', 'About', 'Portfolio', 'Clients', 'Contact Us'],
+				navigationTooltips: ['Packkit List', 'Ready for Launch', 'About Us', 'Use Cases', 'Social Proof', 'LIMITED TIME!', 'Contact Us'],
 				fixedElements: '.header-container, .subfooter',
 				responsiveWidth: 992,
 				responsiveHeight: 600,
