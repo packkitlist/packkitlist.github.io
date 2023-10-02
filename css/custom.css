@@ -1,0 +1,100 @@
+.btn-primary {
+	background-color: #e44125;
+}
+
+.image-box:hover img {
+	z-index: 2
+}
+
+.image-box:hover .overlay-top {
+	opacity: 1 !important;
+	padding: 63px;
+	z-index: 4;
+}
+.image-box:hover .overlay-bottom {
+	opacity: 1 !important;
+	padding: 63px;
+	z-index: 3;
+	background: none;
+}
+
+
+a:hover .icon {
+	border: 1.5px solid orange;
+}
+.icon-label {
+	margin-left: -62.5px;
+}
+.icon {
+  border: 1px solid darkgrey;
+  margin: 1em;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 43px;
+  height: 43px;
+}
+
+.utility {
+  background: url('/assets/icons.jpeg') 15% 14% no-repeat;
+  background-size: 600%;
+}
+.wrist {
+  background: url('/assets/icons.jpeg') 38% 14% no-repeat;
+  background-size: 600%;
+}
+.folds {
+  background: url('/assets/icons.jpeg') 62% 14% no-repeat;
+  background-size: 600%;
+}
+.devices {
+  background: url('/assets/icons.jpeg') 85% 14% no-repeat;
+  background-size: 600%;
+}
+.keys {
+  background: url('/assets/icons.jpeg') 15% 37% no-repeat;
+  background-size: 600%;
+}
+.travel {
+  background: url('/assets/icons.jpeg') 38% 37% no-repeat;
+  background-size: 600%;
+}
+.fire {
+  background: url('/assets/icons.jpeg') 61% 38% no-repeat;
+  background-size: 600%;
+}
+.usb {
+  background: url('/assets/icons.jpeg') 85% 37% no-repeat;
+  background-size: 600%;
+}
+.booze {
+  background: url('/assets/icons.jpeg') 15% 61% no-repeat;
+  background-size: 600%;
+}
+.smoke {
+  background: url('/assets/icons.jpeg') 38% 61% no-repeat;
+  background-size: 600%;
+}
+.eyewear {
+  background: url('/assets/icons.jpeg') 62% 61% no-repeat;
+  background-size: 600%;
+}
+.lighting {
+  background: url('/assets/icons.jpeg') 85% 38% no-repeat;
+  background-size: 600%;
+}
+.writing {
+  background: url('/assets/icons.jpeg') 15% 86% no-repeat;
+  background-size: 600%;
+}
+.listening {
+  background: url('/assets/icons.jpeg') 38% 83% no-repeat;
+  background-size: 600%;
+}
+.carrying {
+  background: url('/assets/icons.jpeg') 62% 86% no-repeat;
+  background-size: 600%;
+}
+.drinking {
+  background: url('/assets/icons.jpeg') 85% 86% no-repeat;
+  background-size: 600%;
+}

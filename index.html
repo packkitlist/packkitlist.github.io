@@ -19,6 +19,12 @@
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 
@@ -51,7 +57,7 @@
   <!-- "transparent-header": makes the header transparent and pulls the banner to top -->
   <!-- "gradient-background-header": applies gradient background to header -->
   <!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
-  <body class="no-trans front-page transparent-header  full-page">
+  <body class="no-trans front-page transparent-header  full-page" style="margin-top: 144px;">
 
     <!-- scrollToTop -->
     <!-- ================ -->
@@ -65,32 +71,39 @@
       <div class="header-container">
         <!-- header start -->
         <!-- ================ -->
-        <header class="header  clearfix">
+        <header class="header clearfix bg-white">
 
           <div class="container">
-            <div class="row">
-              <div class="col-md-3 col-6 ">
+            <div class="row text-center">
+              <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <!-- header-left start -->
                 <!-- ================ -->
                 <div class="header-left clearfix">
 
                   <!-- logo -->
-                  <div id="logo" class="logo">
-                    <a href="<%= root_url %>"><img id="logo_img" src="images/packit_logo.png" alt="Pack It!"></a>
-                  </div>
-                  <div class="site-slogan" style="color: #bbbbbb;">
-                    The Essentials Checklist
+                  <div id="logo" class="row">
+                    <div class="col-md-4 col-2 offset-3 offset-md-0">
+                      <img id="logo_img" src="images/logo_white.png"  class="image-responsive" alt="Pack It!" />
+                    </div>
+                    <div class="col-md-8 col-7 text-start mt-3">
+                      <a href="<%= root_url %>" class="mt-5" style="font-size: 200%;font-weight: bold; text-decoration: none;">
+                        Packkit List
+                      </a><br />
+                      <small>
+                        The Essentials Checklist
+                      </small>
+                    </div>
                   </div>
                 </div>
                 <!-- header-left end -->
 
               </div>
-              <div class="col-md-9 col-6">
+              <div class="col-12 col-md-6 col-lg-8 col-xl-9">
 
                 <!-- header-right start -->
                 <!-- ================ -->
-                <div class="header-right clearfix text-right">
-                  <ul class="social-links circle colored animated-effect-1 text-end">
+                <div class="header-right clearfix">
+                  <ul class="social-links circle colored animated-effect-1 text-md-end">
                     <li class="facebook">
                       <a class="text-white" target="_blank" href="https://www.facebook.com/Packitapp-1308847635849877/"><i class="fa fa-facebook"></i></a>
                     </li>
@@ -124,10 +137,68 @@
           <div class="container">
             <div class="row">
               <div class="col-md-8">
-                <h1 class="title large">Pack It! <span class="text-default">The Essentials Checklist</span></h1>
+                <h1 class="title large">Packkit List! <span class="text-default">The Essentials Checklist</span></h1>
                 <div class="separator-2"></div>
-                <p class="large">Pack It! ..allows you to manage a list of your essential items.  Keep track of your pack! If you lose it, get it all back, in just two clicks!</p>
+                <p class="large">Packkit List! ..allows you to manage a list of your essential items.  </p><p>Keep track of your pack! </p><p>If you lose it, get it all back, in just two clicks!</p>
                 <a href="/users/sign_up" class="btn btn-default btn-xl">Let's Start</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section end -->
+
+
+        <!-- section start -->
+        <!-- ================ -->
+        <section id="section-2" class="section light-gray-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 offset-md-2 text-center">
+                <h2 class="title">Preparing for <span class="text-default">Launch!</span> 🚀</h2>
+                <div class="separator"></div>
+                <p>
+                  What will you put in your Every Day Carry kit?
+                </p>
+                <p>
+                  Check out our categories for some items to load your pack with.
+                </p>
+                <div class="space-bottom"></div>
+                <div class="categories justify-content-center">
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Blades" href="https://amzn.to/3rx9cTr" >
+                    <div class="icon utility">&nbsp;</div><small class="icon-label">Blades</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Watches" href="https://amzn.to/48yavC5" >
+                    <div class="icon wrist">&nbsp;</div><small class="icon-label">Watches</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Wallets" href="https://amzn.to/3ZBugER" >
+                    <div class="icon folds">&nbsp;</div><small class="icon-label">Wallets</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Phones" href="https://amzn.to/3ZTYGm5" >
+                    <div class="icon devices">&nbsp;</div><small class="icon-label">Phones</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Keys" href="https://amzn.to/3rFI44v" >
+                    <div class="icon keys">&nbsp;</div><small class="icon-label">Keys</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Travel" href="https://amzn.to/3LLNH86" >
+                    <div class="icon travel">&nbsp;</div><small class="icon-label">Travel</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Lighters" href="https://amzn.to/3teeHab" >
+                    <div class="icon fire">&nbsp;</div><small class="icon-label">Lighters</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="USB" href="https://amzn.to/3PXeh0y" >
+                    <div class="icon usb">&nbsp;</div><small class="icon-label">USB</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Flasks" href="https://amzn.to/3tdMjF8" >
+                    <div class="icon booze">&nbsp;</div><small class="icon-label">Flasks</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Smokes" href="https://amzn.to/3rFIWpN" >
+                    <div class="icon smoke">&nbsp;</div><small class="icon-label">Smokes</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Eyewear" href="https://amzn.to/3ryRYF5" >
+                    <div class="icon eyewear">&nbsp;</div><small class="icon-label">Eyewear</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Lights" href="https://amzn.to/3ZHUaqG" >
+                    <div class="icon lighting">&nbsp;</div><small class="icon-label">Lights</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Writing" href="https://amzn.to/45fOqW0" >
+                    <div class="icon writing">&nbsp;</div><small class="icon-label">Writing</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Earbuds" href="https://amzn.to/3RJwMai" >
+                    <div class="icon listening">&nbsp;</div><small class="icon-label">Earbuds</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Packs" href="https://amzn.to/3ZCFvgm" >
+                    <div class="icon carrying">&nbsp;</div><small class="icon-label">Packs</small></a>
+                  <a target="_blank" class="icon-group" data-bs-placement="bottom" title="Bottles" href="https://amzn.to/3ZBw6pf" >
+                    <div class="icon drinking">&nbsp;</div><small class="icon-label">Bottles</small></a>
+                </div>
+                <div class="separator"></div>
+                <p>Want some more categories? check out our <a target="_blank" href="/shopping">shopping page!</a>
               </div>
             </div>
           </div>
@@ -136,10 +207,10 @@
 
         <!-- section start -->
         <!-- ================ -->
-        <section id="section-2" class="section dark-translucent-bg" style="background-image: url(images/lifestyle-1.jpg);">
+        <section id="section-3" class="section dark-translucent-bg" style="background-image: url(images/lifestyle-1.jpg);">
           <div class="container">
             <div class="row">
-              <div class="col-12 text-center pv-5">
+              <div class="col-md-8 text-center offset-md-2 pv-20">
                 <h2 class="title">About Us</h2>
                 <div class="separator mt-10"></div>
                 <p class="text-center">Pack It! and never leave home without it again...but if you do, we will help you get it back!</p>
@@ -147,9 +218,9 @@
               </div>
             </div>
           </div>
-          <div class="container">
+          <div class="container-fluid">
             <div class="row">
-              <div class="col-6 col-sm-4">
+              <div class="col-sm-6 col-md-4 offset-lg-2 col-lg-3">
                 <div class="feature-box-2">
                   <span class="default-bg icon small"><i class="fa fa-diamond"></i></span>
                   <div class="body">
@@ -160,7 +231,7 @@
                   <div class="space-bottom"></div>
                 </div>
               </div>
-              <div class="col-6 col-sm-4">
+              <div class="col-sm-6 col-md-4 offset-lg-2 col-lg-3">
                 <div class="feature-box-2">
                   <span class="default-bg icon small"><i class="fa fa-connectdevelop"></i></span>
                   <div class="body">
@@ -171,7 +242,7 @@
                   <div class="space-bottom"></div>
                 </div>
               </div>
-              <div class="col-6 col-sm-4">
+              <div class="col-sm-6 col-md-4 offset-lg-2 col-lg-3">
                 <div class="feature-box-2">
                   <span class="default-bg icon small"><i class="fa icon-snow"></i></span>
                   <div class="body">
@@ -182,8 +253,8 @@
                   <div class="space-bottom"></div>
                 </div>
               </div>
-              <div class="clearfix visible-md visible-lg"></div>
-              <div class="col-6 col-sm-4">
+
+              <div class="col-sm-6 col-md-4 offset-lg-2 col-lg-3">
                 <div class="feature-box-2">
                   <span class="default-bg icon small"><i class="fa fa-heart"></i></span>
                   <div class="body">
@@ -194,8 +265,7 @@
                   <div class="space-bottom"></div>
                 </div>
               </div>
-              <div class="clearfix visible-sm"></div>
-              <div class="col-6 col-sm-4">
+              <div class="col-sm-6 col-md-4 offset-lg-2 col-lg-3">
                 <div class="feature-box-2">
                   <span class="default-bg icon small"><i class="fa fa-cogs"></i></span>
                   <div class="body">
@@ -205,7 +275,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6 col-sm-4">
+              <div class="col-sm-6 col-md-4 offset-lg-2 col-lg-3">
                 <div class="feature-box-2">
                   <span class="default-bg icon small"><i class="fa icon-lifebuoy"></i></span>
                   <div class="body">
@@ -222,10 +292,10 @@
 
         <!-- section start -->
         <!-- ================ -->
-        <section id="section-3" class="section light-gray-bg">
+        <section id="section-4" class="section light-gray-bg">
           <div class="container">
             <div class="row">
-              <div class="col-12 text-center">
+              <div class="col-md-8 offset-md-2 text-center">
                 <h2 class="title">Why use <span class="text-default">Pack It!</span>?</h2>
                 <div class="separator"></div>
                 <p>There are a wide variety of reasons to use Pack It! from travellers to vanlifers, and from professionals to gifting. Pack It! will allow you to create checklists to keep track of it all</p>
@@ -233,115 +303,137 @@
               </div>
             </div>
           </div>
-          <h1 class="text-center">Coming soon! See all the way people can use Pack It! in their lives..</h1>
-          <div class="col-12">
-            <div class="owl-carousel carousel-autoplay">
-              <div class="image-box shadow text-center">
-                <div class="overlay-container">
-                  <img src="" alt="">
-                  <div class="overlay-top">
-                    <div class="text">
-                      <h3><a href="portfolio-item.html">Project Title</a></h3>
-                      <p class="small">Lorem ipsum dolor sit amet.</p>
+          <div class="owl-carousel carousel-autoplay">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="image-box shadow text-center">
+                    <img src="images/android-icon-192x192.png" alt="">
+                    <div class="overlay-top">
+                      <div class="text">
+                        <h3><a href="portfolio-item.html">Travel Use Case</a></h3>
+                        <p class="small">Have you ever left something behind?</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="overlay-bottom">
-                    <div class="links">
-                      <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="image-box shadow text-center">
-                <div class="overlay-container">
-                  <img src="" alt="">
-                  <div class="overlay-top">
-                    <div class="text">
-                      <h3><a href="portfolio-item.html">Project Title</a></h3>
-                      <p class="small">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </div>
-                  <div class="overlay-bottom">
-                    <div class="links">
-                      <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                    <div class="overlay-bottom">
+                      <div class="links">
+                        <a href="" class="btn btn-primary btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="image-box shadow text-center">
-                <div class="overlay-container">
-                  <img src="" alt="">
-                  <div class="overlay-top">
-                    <div class="text">
-                      <h3><a href="portfolio-item.html">Project Title</a></h3>
-                      <p class="small">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="image-box shadow text-center">
+                    <img src="images/android-icon-192x192.png" alt="">
+                    <div class="overlay-top">
+                      <div class="text">
+                        <h3><a href="portfolio-item.html">Inventory Use Case</a></h3>
+                        <p class="small">My team needs things!</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="overlay-bottom">
-                    <div class="links">
-                      <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="image-box shadow text-center">
-                <div class="overlay-container">
-                  <img src="" alt="">
-                  <div class="overlay-top">
-                    <div class="text">
-                      <h3><a href="portfolio-item.html">Project Title</a></h3>
-                      <p class="small">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </div>
-                  <div class="overlay-bottom">
-                    <div class="links">
-                      <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                    <div class="overlay-bottom">
+                      <div class="links">
+                        <a href="" class="btn btn-primary btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="image-box shadow text-center">
-                <div class="overlay-container">
-                  <img src="" alt="">
-                  <div class="overlay-top">
-                    <div class="text">
-                      <h3><a href="portfolio-item.html">Project Title</a></h3>
-                      <p class="small">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="image-box shadow text-center">
+                    <img src="images/android-icon-192x192.png" alt="">
+                    <div class="overlay-top">
+                      <div class="text">
+                        <h3><a href="portfolio-item.html">Family Use Case</a></h3>
+                        <p class="small">Share lists with friends too!</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="overlay-bottom">
-                    <div class="links">
-                      <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                    <div class="overlay-bottom">
+                      <div class="links">
+                        <a href="" class="btn btn-primary btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="image-box shadow text-center">
-                <div class="overlay-container">
-                  <img src="" alt="">
-                  <div class="overlay-top">
-                    <div class="text">
-                      <h3><a href="portfolio-item.html">Project Title</a></h3>
-                      <p class="small">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="image-box shadow text-center">
+                    <img src="images/android-icon-192x192.png" alt="">
+                    <div class="overlay-top">
+                      <div class="text">
+                        <h3><a href="portfolio-item.html">Curator Use Case</a></h3>
+                        <p class="small">These are your collections to sell!</p>
+                      </div>
+                    </div>
+                    <div class="overlay-bottom">
+                      <div class="links">
+                        <a href="" class="btn btn-primary btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                      </div>
                     </div>
                   </div>
-                  <div class="overlay-bottom">
-                    <div class="links">
-                      <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="image-box shadow text-center">
+                    <img src="images/android-icon-192x192.png" alt="">
+                    <div class="overlay-top">
+                      <div class="text">
+                        <h3><a href="portfolio-item.html">Influencer Use Case</a></h3>
+                        <p class="small">Another tool for your toolkit</p>
+                      </div>
+                    </div>
+                    <div class="overlay-bottom">
+                      <div class="links">
+                        <a href="" class="btn btn-primary btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="image-box shadow text-center">
+                    <img src="images/android-icon-192x192.png" alt="">
+                    <div class="overlay-top">
+                      <div class="text">
+                        <h3><a href="portfolio-item.html">Affiliate Use Case</a></h3>
+                        <p class="small">We reward you for clicks!</p>
+                      </div>
+                    </div>
+                    <div class="overlay-bottom">
+                      <div class="links">
+                        <a href="" class="btn btn-primary btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <h1 class="text-center">Sign up Now!</h1>
         </section>
         <!-- section end -->
 
-        <section id="section-4" class="section dark-translucent-bg" style="background-image: url(images/lifestyle-3.jpg);">
+        <section id="section-5" class="section dark-translucent-bg" style="background-image: url(images/lifestyle-3.jpg);">
           <div class="owl-carousel content-slider">
             <div class="container">
               <div class="row">
-                <div class="col-12">
+                <div class="col-md-8 offset-md-2">
                   <div class="testimonial text-center">
                     <div class="testimonial-image">
                       <img src="images/avy.png" alt="Rick Graham" title="Rick Graham" class="rounded-circle">
@@ -361,7 +453,7 @@
             </div>
             <div class="container">
               <div class="row">
-                <div class="col-12">
+                <div class="col-md-8 offset-md-2">
                   <div class="testimonial text-center">
                     <div class="testimonial-image">
                       <img src="images/avatar.jpg" alt="traveller" title="traveller" class="rounded-circle">
@@ -381,31 +473,31 @@
             </div>
           </div>
           <div class="container">
-            <div class="clients-container"a>
+            <div class="clients-container" style="">
               <div class="clients">
                 <div class="client-image">
-                  <a href="#"><img src="" alt=""></a>
+                  <a href="#"><img src="images/android-icon-192x192.png" alt=""></a>
                 </div>
                 <div class="client-image">
-                  <a href="#"><img src="" alt=""></a>
+                  <a href="#"><img src="images/android-icon-192x192.png" alt=""></a>
                 </div>
                 <div class="client-image">
-                  <a href="#"><img src="" alt=""></a>
+                  <a href="#"><img src="images/android-icon-192x192.png" alt=""></a>
                 </div>
                 <div class="client-image">
-                  <a href="#"><img src="" alt=""></a>
+                  <a href="#"><img src="images/android-icon-192x192.png" alt=""></a>
                 </div>
                 <div class="client-image">
-                  <a href="#"><img src="" alt=""></a>
+                  <a href="#"><img src="images/android-icon-192x192.png" alt=""></a>
                 </div>
                 <div class="client-image">
-                  <a href="#"><img src="" alt=""></a>
+                  <a href="#"><img src="images/android-icon-192x192.png" alt=""></a>
                 </div>
                 <div class="client-image">
-                  <a href="#"><img src="" alt=""></a>
+                  <a href="#"><img src="images/android-icon-192x192.png" alt=""></a>
                 </div>
                 <div class="client-image">
-                  <a href="#"><img src="" alt=""></a>
+                  <a href="#"><img src="images/android-icon-192x192.png" alt=""></a>
                 </div>
               </div>
             </div>
@@ -414,17 +506,39 @@
 
         <!-- section start -->
         <!-- ================ -->
-        <section id="section-5" class="section pv-40 stats padding-bottom-clear dark-translucent-bg hovered" style="background-image: url(images/lifestyle-2.jpg);">
+        <section id="section-6" class="section light-gray-bg">
           <div class="container">
             <div class="row">
-              <div class="col-12 text-center pv-5">
+              <div class="col-md-8 offset-md-2 text-center">
+                <h2 class="title">Limited Time! <span class="text-default">SAVE NOW!</span></h2>
+                <div class="separator"></div>
+                <p>INTRODUCTORY PRICE, OFFER ENDS December 1st; get a LIFETIME subscription for <strike>$249</strike> only $149!</p>
+                <div class="">
+                  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+                  <stripe-pricing-table pricing-table-id="prctbl_1NwoQuEedkLAyhSFgedk3mWK"
+                  publishable-key="pk_live_51LuGxxEedkLAyhSF2ywJrhamHhb1BECKgYPFNiDVrK0Ac9qkXyWi5sTJE10rmqB6mU3aL99hTJA8gPOfJ1mlUzuv007852qwCX">
+                  </stripe-pricing-table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1 class="text-center">Time is running out!</h1>
+        </section>
+        <!-- section end -->
+
+        <!-- section start -->
+        <!-- ================ -->
+        <section id="section-7" class="section pv-40 stats padding-bottom-clear dark-translucent-bg hovered" style="background-image: url(images/lifestyle-2.jpg);">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 text-center offset-md-2 pv-20">
                 <h2 class="text-center">Contact Us</h2>
                 <div class="separator"></div>
                 <p class="lead text-center">It would be great to hear from you! Just drop us a line and ask for anything with which you think we could be helpful. We are looking forward to hearing from you!</p>
                 <ul class="list-inline mb-20 text-center">
-                  <li><i class="text-default fa fa-map-marker pr-5"></i> Toronto, Canada</li>
-                  <li><a href="tel:" class="link-dark"><i class="text-default fa fa-phone pl-10 pr-5"></i></a></li>
-                  <li><a href="mailto:packit@raddstudio.com" class="link-dark"><i class="text-default fa fa-envelope-o pl-10 pr-5"></i>support@packkitl.ist</a></li>
+                  <li style=""><i class="text-default fa fa-map-marker pr-5"></i></li>
+                  <li style=""><a href="tel: " class="link-dark"><i class="text-default fa fa-phone pl-10 pr-5"></i></a></li>
+                  <li><a href="mailto:packit@raddstudio.com" class="link-dark"><i class="text-default fa fa-envelope-o pl-10 pr-5"></i>packit@raddstudio.com</a></li>
                 </ul>
                 <div class="separator"></div>
                 <ul class="social-links circle animated-effect-1 margin-clear text-center space-bottom">
@@ -446,7 +560,7 @@
           <div class="subfooter-inner">
             <div class="row">
               <div class="col-md-12">
-                <p class="text-center">Copyright © 2017 Pack It! by <a target="_blank" href="http://www.raddstudio.com">Raddstudio</a>. All Rights Reserved</p>
+                <p class="text-center">Copyright © 2023 Packkit List! by <a target="_blank" href="http://www.raddstudio.com">Radd Studio Inc.</a>. All Rights Reserved</p>
               </div>
             </div>
           </div>
