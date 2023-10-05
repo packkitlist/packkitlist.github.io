@@ -49,6 +49,11 @@
 
     <!-- Custom css -->
     <link href="css/custom.css" rel="stylesheet">
+    <style>
+      .mt-n5 {
+        margin-top: -5em;
+      }
+    </style>
   </head>
 
   <!-- body classes:  -->
@@ -71,7 +76,7 @@
       <div class="header-container">
         <!-- header start -->
         <!-- ================ -->
-        <header class="header clearfix bg-white">
+        <header class="header clearfix">
 
           <div class="container">
             <div class="row text-center">
@@ -105,13 +110,13 @@
                 <div class="header-right clearfix">
                   <ul class="social-links circle colored animated-effect-1 text-md-end">
                     <li class="facebook">
-                      <a class="text-white" target="_blank" href="https://www.facebook.com/Packitapp-1308847635849877/"><i class="fa fa-facebook"></i></a>
+                      <a class="text-white" target="_blank" href="https://www.facebook.com/packkitlist"><i class="fa fa-facebook"></i></a>
                     </li>
                     <li class="twitter">
-                      <a class="text-white" target="_blank" href="http://www.twitter.com/packitmobi"><i class="fa fa-twitter"></i></a>
+                      <a class="text-white" target="_blank" href="http://www.twitter.com/packkitlist"><i class="fa fa-twitter"></i></a>
                     </li>
                     <li class="instagram">
-                      <a class="text-white" target="_blank" href="http://www.instagram.com/packitmobi"><i class="fa fa-instagram"></i></a>
+                      <a class="text-white" target="_blank" href="http://www.instagram.com/packkitlist"><i class="fa fa-instagram"></i></a>
                     </li>
                     <li class="sign-in">
                       <a class="text-white" href="/users/sign_in"><i class="fa fa-sign-in"></i></a>
@@ -151,7 +156,7 @@
         <!-- section start -->
         <!-- ================ -->
         <section id="section-2" class="section light-gray-bg">
-          <div class="container">
+          <div class="container mt-n5">
             <div class="row">
               <div class="col-md-8 offset-md-2 text-center">
                 <h2 class="title">Preparing for <span class="text-default">Launch!</span> 🚀</h2>
@@ -208,7 +213,7 @@
         <!-- section start -->
         <!-- ================ -->
         <section id="section-3" class="section dark-translucent-bg" style="background-image: url(images/lifestyle-1.jpg);">
-          <div class="container">
+          <div class="container mt-n5">
             <div class="row">
               <div class="col-md-8 text-center offset-md-2 pv-20">
                 <h2 class="title">About Us</h2>
@@ -293,10 +298,10 @@
         <!-- section start -->
         <!-- ================ -->
         <section id="section-4" class="section light-gray-bg">
-          <div class="container">
+          <div class="container mt-n5">
             <div class="row">
               <div class="col-md-8 offset-md-2 text-center">
-                <h2 class="title">Why use <span class="text-default">Pack It!</span>?</h2>
+                <h2 class="title">Why use <span class="text-default">Packkit!</span>?</h2>
                 <div class="separator"></div>
                 <p>There are a wide variety of reasons to use Pack It! from travellers to vanlifers, and from professionals to gifting. Pack It! will allow you to create checklists to keep track of it all</p>
                 <div class="space-bottom"></div>
@@ -421,11 +426,12 @@
                       </div>
                     </div>
                   </div>
+
+                  <h1 class="text-center">Sign up Now!</h1>
                 </div>
               </div>
             </div>
           </div>
-          <h1 class="text-center">Sign up Now!</h1>
         </section>
         <!-- section end -->
 
@@ -519,10 +525,38 @@
                   publishable-key="pk_live_51LuGxxEedkLAyhSF2ywJrhamHhb1BECKgYPFNiDVrK0Ac9qkXyWi5sTJE10rmqB6mU3aL99hTJA8gPOfJ1mlUzuv007852qwCX">
                   </stripe-pricing-table>
                 </div>
+                <small class="text-center">Time is running out!</small>
+                <div id="countdown" class="d-flex justify-content-center"></div>
               </div>
             </div>
           </div>
-          <h1 class="text-center">Time is running out!</h1>
+          <script type="text/javascript">
+            (function(){
+            function countdownTimer() {
+              const difference = +new Date("2023-12-01") - +new Date();
+              let remaining = "Time's up!";
+
+              if (difference > 0) {
+                const parts = {
+                  days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                  hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                  minutes: Math.floor((difference / 1000 / 60) % 60),
+                  seconds: Math.floor((difference / 1000) % 60),
+                };
+                remaining = Object.keys(parts).map(part => {
+                return `<div class="col-1 mx-3"><span class="card h1 py-5">${parts[part]}</span><br /><em><small>${part}</small></em></div>`;  
+                }).join(" ");
+              }
+
+              document.getElementById("countdown").innerHTML = remaining;
+              setTimeout(function(){
+                countdownTimer();
+              }, 900)
+            }
+
+            countdownTimer();
+          })();
+          </script>
         </section>
         <!-- section end -->
 
@@ -536,15 +570,15 @@
                 <div class="separator"></div>
                 <p class="lead text-center">It would be great to hear from you! Just drop us a line and ask for anything with which you think we could be helpful. We are looking forward to hearing from you!</p>
                 <ul class="list-inline mb-20 text-center">
-                  <li style=""><i class="text-default fa fa-map-marker pr-5"></i></li>
-                  <li style=""><a href="tel: " class="link-dark"><i class="text-default fa fa-phone pl-10 pr-5"></i></a></li>
-                  <li><a href="mailto:packit@raddstudio.com" class="link-dark"><i class="text-default fa fa-envelope-o pl-10 pr-5"></i>packit@raddstudio.com</a></li>
+                  <!-- <li style=""><i class="text-default fa fa-map-marker pr-5"></i></li>
+                  <li style=""><a href="tel: " class="link-dark"><i class="text-default fa fa-phone pl-10 pr-5"></i></a></li> -->
+                  <li><a href="mailto:packit@raddstudio.com"><i class="fa fa-envelope-o pl-10 pr-5"></i>hello@packkitlist.com</a></li>
                 </ul>
                 <div class="separator"></div>
                 <ul class="social-links circle animated-effect-1 margin-clear text-center space-bottom">
-                  <li class="facebook"><a target="_blank" href="https://www.facebook.com/Packitapp-1308847635849877/"><i class="fa fa-facebook"></i></a></li>
-                  <li class="twitter"><a target="_blank" href="http://www.twitter.com/packitmobi"><i class="fa fa-twitter"></i></a></li>
-                  <li class="instagram"><a target="_blank" href="http://www.instagram.com/packitmobi"><i class="fa fa-instagram"></i></a></li>
+                  <li class="facebook"><a target="_blank" href="https://www.facebook.com/packkitlist"><i class="fa fa-facebook"></i></a></li>
+                  <li class="twitter"><a target="_blank" href="http://www.twitter.com/packkitlist"><i class="fa fa-twitter"></i></a></li>
+                  <li class="instagram"><a target="_blank" href="http://www.instagram.com/packkitlist"><i class="fa fa-instagram"></i></a></li>
                 instagram
               </div>
             </div>
@@ -575,7 +609,6 @@
     <!-- ================================================== -->
     <!-- Jquery and Bootstap core js files -->
     <script type="text/javascript" src="plugins/jquery.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <!-- Modernizr javascript -->
     <script type="text/javascript" src="plugins/modernizr.js"></script>
     <!-- Fullpage javascript -->
