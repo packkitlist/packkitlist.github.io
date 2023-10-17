@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="og:image" content="https://raddstudio.com/images/award_bg_cesa19.jpg" />
+    <meta
+      name="og:description"
+      content="Design, Develop, and Dream. Boutique studio for web and software amazon and services."
+    />
+    <meta
+      name="description"
+      content="Design, Develop, and Dream. Boutique studio for web and software amazon and services."
+    />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon-1024x1024.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/images/manifest.json" />
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <script async src="/js/amazon.js"></script>
+    <script async src="/js/images.js"></script>
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+
+    <!-- https://raddstudio.us.auth0.com/api/v2/ -->
+
+    <!-- Font Awesome CSS -->
+    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Fontello CSS -->
+    <link href="/fonts/fontello/css/fontello.css" rel="stylesheet">
+
+    <script
+      src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+      crossorigin></script>
+
+    <script
+      src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+      crossorigin></script>
+
+    <script>var Alert = ReactBootstrap.Alert;</script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>Packkit List // The Essentials Checklist</title>
+    <style>
+      small {
+        color: #aeaeae;
+      }
+      stripe-pricing-table:hover {
+        background: #ccc;
+      }
+      .section {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover !important;
+      }
+     #signupForm {
+        opacity: 1;
+        transition: opacity 1s; 
+      }
+
+      #signupForm.fade {
+        opacity: 0;
+      }
+
+      a:visited div.card  {
+        border-color: grey;
+        background-color: lightgrey;
+        color: black;
+      }
+
+      div.card-body {
+        
+      }
+
+      h2::first-letter {
+        text-transform:capitalize;
+      }
+    </style>
+    <!-- The Project core CSS file -->
+    <link href="/css/style.css" rel="stylesheet" >
+    <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
+    <link href="/css/skins/orange.css" rel="stylesheet">
+
+    <!-- Custom css -->
+    <link href="/css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="container-fluid" id="root">
+      <main>
+        <!-- header start -->
+        <!-- ================ -->
+        <header class="header clearfix">
+
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <!-- header-left start -->
+                <!-- ================ -->
+                <div class="header-left clearfix">
+
+                  <!-- logo -->
+                  <div id="logo" class="row">
+                    <div class="col-md-4 col-2 col-3 offset-md-0">
+                      <img id="logo_img" src="/images/logo_white.png"  class="image-responsive" alt="Pack It!" />
+                    </div>
+                    <div class="col-md-8 col-7 text-start mt-3">
+                      <a href="<%= root_url %>" class="mt-5" style="font-size: 200%;font-weight: bold; text-decoration: none;">
+                        Packkit List
+                      </a><br />
+                      <small>
+                        The Essentials Checklist
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <!-- header-left end -->
+
+              </div>
+              <div class="col-12 col-md-6 col-lg-8 col-xl-9">
+
+                <!-- header-right start -->
+                <!-- ================ -->
+                <div class="header-right clearfix">
+                  <ul class="social-links circle colored animated-effect-1 text-md-end">
+                    <li class="facebook">
+                      <a class="text-white" target="_blank" href="https://www.facebook.com/packkitlist"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="twitter">
+                      <a class="text-white" target="_blank" href="http://www.twitter.com/packkitlist"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="instagram">
+                      <a class="text-white" target="_blank" href="http://www.instagram.com/packkitlist"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li class="sign-in d-none">
+                      <a class="text-white" href="/users/sign_in"><i class="fa fa-sign-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- header-right end -->
+
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- header end -->
+        <div class="row m-2">
+          <div class="col-6 text-start">
+            <div class="mb-5">
+              <h4>Your Shopping Dashboard</h4>
+              <h1 class="display-5 fw-bold lh-1 mb-0">Quick Amazon Searches</h1>
+              <small>Favourite yours to keep them at the top of the page!</small>
+            </div>
+            <p>A convienient list of the most common Amazon Searches!</p> 
+          </div>
+          <div id="signup" style="background: url(/images/photography/hk_43817778_621301638265431_6174468599253341892_n.jpeg) no-repeat 100% 0% fixed" class="col-6 text-end">
+            <div class="text-center bg-light border rounded-3 p-5">
+              <h1>Save your favourites by signing up!</h1>
+              <!-- <form class=" id="signupForm" action="http://localhost:3001/whitelist/347a99a6-4906-43d7-ae7b-6cb0d847f433" method="post"> -->
+              <form id="signupForm" action="https://clickstudio.email/whitelist/2caa3b3f-98b1-469d-ba72-4de844946c8f" method="post">
+                <h3>Sign Up Now</h3>
+                <div class="form-floating">
+                  <input type="text" name="customer[name]" class="form-control" id="floatingInput" placeholder="Full Name">
+                  <label for="floatingInput">Name</label>
+                </div>
+                
+                <div class="form-floating">
+                  <input type="email" name="customer[email]" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
+                </div>
+
+                <div class="checkbox my-3">
+                  <label>
+                    <input name="customer[consented_at]" type="checkbox" value="remember-me" /> <small>By signing up, I agree to this website's privacy policy and terms of service. I also consent to receive marketing emails.</small>
+                  </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+                <small>Powered by: <a href="https://clickstudio.email">clickstudio.email</a></small>
+              </form>
+              <div id="welcome"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-none"> 
+          <div id="amazon-quicksearch"></div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <small>Are you a heavy Amazon User?? Book mark this page for quick searches</small>
+              <div class="px-5">
+                <img src="/images/329584141_1459576978114276_7798631343438351300_n.png" class="img-fluid rounded-3 mb-4" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="row text-center">
+        <div class="col-12">
+          <div class="col-md-10 offset-md-1 px-4 py-2 py-lg-5">
+            <div class="row flex-lg-row align-items-center g-5 py-2 py-md-5 text-start">
+              <div class="col-12 py-2 col-md-7">
+                <div class="px-md-5">
+                  <!-- <img src="" class="img-fluid border rounded-3 shadow-lg mb-4" loading="lazy" /> -->
+                </div>
+              </div>
+              <div class="col-12 col-md-5">
+                <small>Most Popular Searches of 2023</small>
+                <h2 class="display-5 fw-bold lh-1 mb-3">Easy Touch Icons</h2>
+                <p class="lead">Sign up for more features</p>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <a href="#signup" class="btn btn-primary btn-lg px-4 me-md-2" target="_blank">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-12">
+          <div class="col-md-10 offset-md-1 px-4 py-2 py-lg-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-2 py-md-5 text-start">
+              <div class="col-12 py-2 col-md-7">
+                <div class="px-lg-5">
+                  <!-- <img src="" class="img-fluid border rounded-3 shadow-lg mb-4" loading="lazy" /> -->
+                </div>
+              </div>
+              <div class="col-12 col-md-5">
+                <h1 class="display-5 fw-bold lh-1 mb-3">You will be amazed at how helpful this toolkit is!</h1>
+                <p class="lead">Join and streamline your process and improve your projects.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <a href="#signup" class="btn btn-primary btn-lg px-4 me-md-2" target="_blank">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer bg-dark">
+        <div class="container">
+          <nav class="w-100 text-end mr-3 navbar navbar-expand navbar-light fixed-bottom">
+            <p class="w-100 text-black">
+              <a href="https://packkitlist.com" class="bg-light p-1 rounded">packkitlist.com</a>
+              <br> <span class="bg-light p-1 rounded">© 2023</span>
+            </p>
+          </nav>
+        </div>
+      </footer>
+    </div>
+        
+    <div id="amazon-section" class="row d-none">
+      <div class="col-12">
+        <h2></h2>
+
+        <div class="row my-5 justify-content-center text-center cards"></div>
+      </div>
+    </div>
+
+    <div class="col-4 col-md-3 col-lg-2 col-xl-1 my-2 d-none" id="amazon-card">
+      <a href="" class="" target="_blank" rel="nofollow" style="height:120px;">
+        <div class="card">
+          <img class="card-img-top" style="overflow:hidden;width:100%;height:120px;" />
+          <div class="card-body">
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", () => {
+        //eraseCookie('amazon-clickstudio');
+        
+        const form = document.getElementById("signupForm");
+        const welcome = document.getElementById("welcome");
+        const searches = document.getElementById('amazon-quicksearch');
+
+        function handleSubmit(event) {
+          event.preventDefault();
+          console.log(event);
+
+          let xhr = new XMLHttpRequest();
+          xhr.open("POST", event.currentTarget.action); 
+          xhr.onload = function(event){ 
+              let customer = JSON.parse(event.target.response);
+              if (customer.id){
+                showCategories();
+                setCookie('amazon-clickstudio','confirmed',365);
+              }
+              
+          }; 
+          // or onerror, onabort
+          let formData = new FormData(document.getElementById("signupForm")); 
+          xhr.send(formData);
+
+          return false;
+        }
+
+        form.addEventListener("submit", handleSubmit);
+
+        showCategories(); //if (getCookie('amazon-clickstudio') === 'confirmed') 
+
+        function prepareGoods() {
+          const section = document.getElementById('amazon-section');
+          const card = document.getElementById('amazon-card');
+        
+          let newSection = section.cloneNode();
+          newSection.innerHTML = section.innerHTML;
+          // let sectionTitle = newSection.getElementsByTagName('h2')[0];
+          // sectionTitle.innerHTML = keys[i];
+
+          let cards = newSection.getElementsByClassName('cards')[0];
+
+          for (i=0; i<amazon.length; i++){
+            const g = amazon[i];
+
+            let newCard = card.cloneNode();
+            newCard.innerHTML = card.innerHTML;
+            let image = newCard.getElementsByTagName('img')[0];
+            let title = newCard.getElementsByTagName('p')[0];
+            let link = newCard.getElementsByTagName('a')[0];
+            if (g){
+              // debugger
+              image.src = images[g.keyword][0].url; //`/images/amazon/${g[0]}`;
+              title.innerHTML = g.keyword;
+              link.href = g.url;
+
+              newCard.classList.remove('d-none');
+              cards.append(newCard);
+            }
+          }
+          newSection.append(cards);
+          newSection.classList.remove('d-none');
+          searches.append(newSection);
+          searches.parentElement.classList.remove('d-none');
+        };
+
+        function showCategories() {
+          searches.classList.remove('d-none'); 
+          form.remove();
+          welcome.innerHTML = "<small>Welcome Back!</small>";
+
+          prepareGoods();
+        }
+
+      });
+
+      function setCookie(name,value,days) {
+          let expires = "";
+          if (days) {
+              let date = new Date();
+              date.setTime(date.getTime() + (days*24*60*60*1000));
+              expires = "; Expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; Path=/; SameSite=None;";
+      }
+      function getCookie(name) {
+          let nameEQ = name + "=";
+          let ca = document.cookie.split(';');
+          for(let i=0;i < ca.length;i++) {
+              let c = ca[i];
+              while (c.charAt(0)==' ') c = c.substring(1,c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+      }
+      function eraseCookie(name) {   
+          document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=None;';
+      }
+      
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/651ed6f26fcfe87d54b6d99f/1hc07f8kj';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
+</html>
