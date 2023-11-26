@@ -808,7 +808,7 @@
 				anchors: ['Home', 'Launch', 'About', 'Uses', 'Proofs', 'Offer','Contact'],
 				navigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Packkit List', 'Ready for Launch', 'About Us', 'Use Cases', 'Social Proof', 'LIMITED TIME!', 'Contact Us'],
+				navigationTooltips: ['Packkit List', 'Ready for Launch', 'About Us', 'Use Cases', 'Social Proof', 'LIMITED TIME!', 'Join the Community', 'Contact Us'],
 				fixedElements: '.header-container, .subfooter',
 				responsiveWidth: 992,
 				responsiveHeight: 600,

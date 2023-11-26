@@ -563,7 +563,128 @@
 
         <!-- section start -->
         <!-- ================ -->
-        <section id="section-7" class="section pv-40 stats padding-bottom-clear dark-translucent-bg hovered" style="background-image: url(images/lifestyle-2.jpg);">
+        <section id="section-7" class="section pv-40 stats padding-bottom-clear dark-translucent-bg hovered">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 text-center offset-md-2 pv-20">
+                <h2 class="text-center">Join our mailing list</h2>
+                <div class="separator"></div>
+                <p class="lead text-center">Want to keep up with our monthly updates? sign up here and we will let you know!</p>
+                <div class="separator"></div>
+                  <div id="signup">
+                    <div class="text-center border rounded-3 p-5">
+                      <!-- <form class="my-5 d-flex justify-content-center" id="signupForm" action="http://localhost:3000/whitelist/7c65a8f2-f155-44d3-8b12-49cd5c85a8a9" method="post"> -->
+                      <form class="my-5 d-flex justify-content-center" id="signupForm" action="https://clickstudio.email/whitelist/d72f866c-fa75-4ccf-9726-36452c1cc25e" method="post">
+                        <div class="w-100 text-start">
+                          <h1>Good things come to those who wait!!</h1>
+                          <p>We have some great news for our community, join it to get the goods!</p>
+                          <p>If you are...</p>
+                          <ul>
+                            <li>A Mom or Dad</li>
+                            <li>A small business owner</li>
+                            <li>An Affiliate Marketer</li>
+                            <li>A Fashion or EDC Influencer</li>
+                          </ul>
+                          <p>We are building this for you!</p>
+                        </div>
+                        <div class="text-start ps-5">
+                          <h3>Sign Up Now</h3>
+                          <div class="form-floating pb-2">
+                            <input type="text" name="customer[name]" class="form-control" id="floatingInput" placeholder="Full Name">
+                            <label for="floatingInput">Name</label>
+                          </div>
+                          <div class="form-floating pb-2">
+                            <input type="email" name="customer[email]" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                          </div>
+                          <div class="checkbox my-3">
+                            <label>
+                              <input name="customer[consented_at]" type="checkbox" value="remember-me" /> <small>By signing up, I agree to this website's privacy policy and terms of service. I also consent to receive marketing emails.</small>
+                            </label>
+                          </div>
+
+                          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+                          <small>Powered by: <a href="https://clickstudio.email">clickstudio.email</a></small>
+                          </div>
+                      </form>
+                      <div id="welcome"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <script type="text/javascript">
+
+          document.addEventListener("DOMContentLoaded", () => {
+            //eraseCookie('packkitlist-clickstudio');
+
+            const form = document.getElementById("signupForm");
+            const welcome = document.getElementById("welcome");
+
+            function handleSubmit(event) {
+              event.preventDefault();
+              console.log(event);
+
+              let xhr = new XMLHttpRequest();
+              xhr.open("POST", event.currentTarget.action); 
+              xhr.onload = function(event){ 
+                  let customer = JSON.parse(event.target.response);
+                  if (customer.id){
+                    openGuide();
+                    setCookie('packkitlist-clickstudio','confirmed',365);
+                  }
+                  
+              }; 
+              // or onerror, onabort
+              let formData = new FormData(document.getElementById("signupForm")); 
+              xhr.send(formData);
+
+              return false;
+            }
+
+            form.addEventListener("submit", handleSubmit);
+
+            if (getCookie('packkitlist-clickstudio') === 'confirmed') openGuide();
+
+            function openGuide() {
+              form.remove();
+              welcome.innerHTML = "<small>Welcome Back!</small>";
+              console.log('done');
+            }
+
+          });
+
+          function setCookie(name,value,days) {
+              let expires = "";
+              if (days) {
+                  let date = new Date();
+                  date.setTime(date.getTime() + (days*24*60*60*1000));
+                  expires = "; Expires=" + date.toUTCString();
+              }
+              document.cookie = name + "=" + (value || "")  + expires + "; Path=/; SameSite=None;";
+          }
+          function getCookie(name) {
+              let nameEQ = name + "=";
+              let ca = document.cookie.split(';');
+              for(let i=0;i < ca.length;i++) {
+                  let c = ca[i];
+                  while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                  if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+              }
+              return null;
+          }
+          function eraseCookie(name) {   
+              document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=None;';
+          }
+          
+        </script>
+        <!-- section end -->
+
+        <!-- section start -->
+        <!-- ================ -->
+        <section id="section-8" class="section pv-40 stats padding-bottom-clear dark-translucent-bg hovered" style="background-image: url(images/lifestyle-2.jpg);">
           <div class="container">
             <div class="row">
               <div class="col-md-8 text-center offset-md-2 pv-20">
@@ -580,7 +701,7 @@
                   <li class="facebook"><a target="_blank" href="https://www.facebook.com/packkitlist"><i class="fa fa-facebook"></i></a></li>
                   <li class="twitter"><a target="_blank" href="http://www.twitter.com/packkitlist"><i class="fa fa-twitter"></i></a></li>
                   <li class="instagram"><a target="_blank" href="http://www.instagram.com/packkitlist"><i class="fa fa-instagram"></i></a></li>
-                instagram
+                </ul>
               </div>
             </div>
           </div>
