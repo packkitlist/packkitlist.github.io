@@ -805,7 +805,7 @@
 		//Full Page
 		if ($(".fullpage-site").length>0) {
 			$('.fullpage-site').fullpage({
-				anchors: ['Home', 'Launch', 'About', 'Uses', 'Proofs', 'Offer','Contact'],
+				anchors: ['Home', 'Launch', 'About', 'Usecases', 'Proofs', 'OFFER', 'Community', 'Contact'],
 				navigation: true,
 				navigationPosition: 'right',
 				navigationTooltips: ['Packkit List', 'Ready for Launch', 'About Us', 'Use Cases', 'Social Proof', 'LIMITED TIME!', 'Join the Community', 'Contact Us'],
