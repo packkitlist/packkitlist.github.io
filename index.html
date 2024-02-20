@@ -519,15 +519,38 @@
               <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
                 <h2 class="title">Limited Time! <span class="text-default">SAVE NOW!</span></h2>
                 <div class="separator"></div>
-                <p>INTRODUCTORY PRICE, OFFER ENDS December 1st; get a LIFETIME subscription for <strike>$249</strike> only $149!</p>
-                <div class="mb-1">
-                  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-                  <stripe-pricing-table pricing-table-id="prctbl_1NwoQuEedkLAyhSFgedk3mWK"
-                  publishable-key="pk_live_51LuGxxEedkLAyhSF2ywJrhamHhb1BECKgYPFNiDVrK0Ac9qkXyWi5sTJE10rmqB6mU3aL99hTJA8gPOfJ1mlUzuv007852qwCX">
-                  </stripe-pricing-table>
+                <p>INTRODUCTORY PRICE, OFFER ENDS December 1st; get a LIFETIME subscription for <strike>$247</strike> only $147!</p>
+                <div class="row text-center">
+                  <div class="col-12 mt-3">
+                    <p>Go PRO for only: <br />
+                      <a href="https://buy.stripe.com/eVa4jIevcd8baVW4gH">$7/m</a> or
+                      <a href="https://buy.stripe.com/bIY6rQ0Em9VZ2pq7t2">$77/a</a>!
+                    </p>
+                    <p class="m-2"><b>OR</b></p>
+                    <p>ONE TIME PRICE <strike>US$247</strike><span class="badge bg-success">US$147</span></p>
+                    <div class="row">
+                      <div class="col-12 col-xl-4"><p class="pt-3">COUPON:&nbsp;</p></div>
+                      <div class="col-12 col-xl-8">
+                        <div class="card bg-white border-1 p-3 w-100">
+                          <b>PKLEARLYBIRD147</b>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mt-3 alert bg-warning"><em>LIMITED TO FIRST 100!</em></p>
+                  </div>
                 </div>
-                <div id="countdown" class="d-flex justify-content-center my-2"></div>
-                <small class="text-center">Time is running out! Your support will help us deliver our iOS + Android products sooner </small>
+                <div class="mb-1">
+                  <stripe-buy-button
+                    buy-button-id="buy_btn_1Of7ElEedkLAyhSFK76WezvT"
+                    publishable-key="pk_live_51LuGxxEedkLAyhSF2ywJrhamHhb1BECKgYPFNiDVrK0Ac9qkXyWi5sTJE10rmqB6mU3aL99hTJA8gPOfJ1mlUzuv007852qwCX"
+                  >
+                  </stripe-buy-button>
+                  <script async
+                    src="https://js.stripe.com/v3/buy-button.js">
+                  </script>
+                </div>
+                <div id="countdown" class="d-none justify-content-center my-2"></div>
+                <small class="text-center d-none">Time is running out! Your support will help us deliver our iOS + Android products sooner </small>
               </div>
             </div>
           </div>
